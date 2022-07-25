@@ -1,10 +1,24 @@
+import * as utils from './utils/preloader-img.js';
+
+utils.showBlankPageLoading();
+
+
+window.addEventListener('load', () => {
+  moveInleft.play();
+  rotateIn.play();
+  moveInRight.play();
+  moveInFromBottom.play();
+  rollInFromRight.play();
+});
+
+
+
 const animationOptions = {
   fill: "forwards",
   duration: 2000,
   easing: "ease-out",
   delay: 500,
 };
-
 // ** MOVE IN FROM LEFT
 const topHeader = document.querySelector(".hero__header__sub--top");
 const topHeaderKfs = [
@@ -21,13 +35,9 @@ const topHeaderKfs = [
     transform: "translate(0)",
   },
 ];
-const topHeaderFx = new KeyframeEffect(
-  topHeader,
-  topHeaderKfs,
-  animationOptions
-);
+const topHeaderFx = new KeyframeEffect(topHeader,topHeaderKfs,animationOptions);
 const moveInleft = new Animation(topHeaderFx);
-moveInleft.play();
+//moveInleft.play();
 
 // ** ROTATE VERTICAL
 const middleHeader = document.querySelector(".hero__header__main");
@@ -45,13 +55,9 @@ const middleHeaderKFs = [
     opacity: 1,
   },
 ];
-const middleHeaderFx = new KeyframeEffect(
-  middleHeader,
-  middleHeaderKFs,
-  animationOptions
-);
+const middleHeaderFx = new KeyframeEffect(middleHeader,middleHeaderKFs, animationOptions);
 const rotateIn = new Animation(middleHeaderFx);
-rotateIn.play();
+//rotateIn.play();
 
 // ** MOVE IN FROM RIGHT
 const bottomHeader = document.querySelector(".hero__header__sub--bottom");
@@ -69,14 +75,10 @@ const bottomHeaderKfs = [
     transform: "translate(0)",
   },
 ];
-const bottomHeaderFx = new KeyframeEffect(
-  bottomHeader,
-  bottomHeaderKfs,
-  animationOptions
-);
+const bottomHeaderFx = new KeyframeEffect( bottomHeader, bottomHeaderKfs,animationOptions);
 
 const moveInRight = new Animation(bottomHeaderFx);
-moveInRight.play();
+//moveInRight.play();
 
 // MOVE IN FROM BOTTOM
 const buttonEnter = document.querySelector(".btn--red");
@@ -95,10 +97,10 @@ const buttonEnterFx = new KeyframeEffect(buttonEnter, buttonEnterKFs, {
   delay: 1500,
   easing: "cubic-bezier(.17,.67,.76,1.48)",
   duration: 1000,
-  fill: "backwards",
+  fill: "forwards",
 });
 const moveInFromBottom = new Animation(buttonEnterFx);
-moveInFromBottom.play();
+//moveInFromBottom.play();
 
 // ** ROLL IN FROM RIGHT
 const logo = document.querySelector(".hero__logo");
@@ -118,4 +120,6 @@ const logoFx = new KeyframeEffect(logo, logoKFs, {
   easing: "cubic-bezier(.17,.67,.43,1.27)",
 });
 const rollInFromRight = new Animation(logoFx);
-rollInFromRight.play();
+//rollInFromRight.play();
+
+
