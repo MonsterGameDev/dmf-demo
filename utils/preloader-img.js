@@ -1,3 +1,6 @@
+
+
+export const preload = (sources) => {
 /**
  * PRELOAD STRATEGY.
  * EX:
@@ -7,7 +10,6 @@
 ])
  */
 
-export const preload = (sources) => {
     const images = [];
     for (const s of sources) {
       const image = new Image();
@@ -18,6 +20,7 @@ export const preload = (sources) => {
 
 export const showBlankPageLoading = () => {
     const heroSection = document.querySelector('.hero');
+   
 
     window.addEventListener('load', () => {
         heroSection.animate([

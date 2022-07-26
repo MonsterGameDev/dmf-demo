@@ -1,5 +1,5 @@
 
-
+/** INITIAL STYLES *******************************************************/
 *,
 *::after,
 *::before {
@@ -18,8 +18,14 @@
 body {
   position: relative;
   padding: 2.4vw 2.4vw 0 2.4vw;
+  
 }
 
+.frontpage-container{
+  background-color: #dac3c3;
+}
+
+/** HERO SECTION STYLES *******************************************************/
 
 .hero-section-wrapper {
   filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.5));
@@ -29,7 +35,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("./img/bagtaepper/D-467.jpg");
+  background-image: url("./img/bagtaepper/D-467-min.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 90%);
@@ -103,6 +109,8 @@ body {
   text-align: right;
 }
 
+/** BUTTON COMPONENT STYLES *******************************************************/
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -163,24 +171,23 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
 }
 
-/*      ABOUT SECTION        */
+/** ABOUT SECTION ***************************************/
 
 
 .about {
     width: 100%;
    
-    background-color:rgb(245, 215, 215);
+   
     margin-top: -25vw;
     padding: 25vw 3vw 3vw 3vw;
     position:relative;
-    z-index: -1;
+  
 
     font-size: var(--font-size-body);
     color:rgb(109, 109, 109)
     
 
 } 
-
 
 .about__content__header {
     color: var(--logo-red);
@@ -212,23 +219,6 @@ body {
     border-bottom: 1px solid rgb(109, 109, 109);
 }
 
-/* Loading Class for imagePreloading*/
-.loading {
-
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-  background-color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader{
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 
 
