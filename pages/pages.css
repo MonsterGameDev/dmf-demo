@@ -1,0 +1,80 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  padding: 2rem 2rem 0 2rem;
+  font-family: Montserrat;
+}
+
+.content {
+  position: relative;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #edc2dd;
+  text-shadow: 1px 1px 5px #3f1f33;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./../img/bagtaepper/D-087.jpg");
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(112 194 249);
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+}
+
+.link-box {
+  width: 30vw;
+  min-height: 10vh;
+  border: 2px solid darkblue;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(0, 109, 139, 0.42);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: snow;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: text-shadow 2s;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+a:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #1884ff, 0 0 40px #1275e5, 0 0 55px #49ff18, 0 0 75px #49ff18,
+    2px 2px 2px rgba(206, 89, 55, 0);
+}
